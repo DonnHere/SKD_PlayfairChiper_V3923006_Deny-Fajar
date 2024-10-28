@@ -1,0 +1,136 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style dasar body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #83a4d4, #b6fbff);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Kontainer utama */
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Efek animasi kontainer */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Judul halaman */
+h1 {
+    text-align: center;
+    color: #444;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #83a4d4;
+    padding-bottom: 10px;
+}
+
+/* Style form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+    font-size: 1em;
+}
+
+/* Input dan textarea dengan efek fokus */
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 1em;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #83a4d4;
+    box-shadow: 0 0 8px rgba(131, 164, 212, 0.3);
+    outline: none;
+}
+
+/* Style tombol */
+button {
+    padding: 12px;
+    background-color: #83a4d4;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #5c8db8;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Style hasil keluaran */
+h2 {
+    margin-top: 25px;
+    color: #333;
+    font-size: 1.5em;
+    text-align: center;
+    border-top: 2px solid #ddd;
+    padding-top: 15px;
+}
+
+/* Area hasil dengan animasi fade-in */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    animation: fadeInResult 0.5s ease-in-out;
+}
+
+/* Animasi untuk area hasil */
+@keyframes fadeInResult {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tampilan mobile */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
